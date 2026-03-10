@@ -1,43 +1,43 @@
 # 🛒 WebBanHangOnline
 
-> A simple **ASP.NET MVC E-Commerce Web Application** built for learning and practicing web development with .NET.
+> A simple **ASP.NET MVC E-Commerce Web Application** built for learning and practicing web development with **.NET Framework**.
 
 ---
 
-## 📌 Giới thiệu
+# 📌 Giới thiệu
 
 **WebBanHangOnline** là một website bán hàng trực tuyến được xây dựng bằng **ASP.NET MVC (.NET Framework)**.
 
-Hệ thống cho phép người dùng duyệt sản phẩm, xem chi tiết sản phẩm và quản lý dữ liệu bán hàng thông qua giao diện web.
+Hệ thống cho phép người dùng xem danh sách sản phẩm, xem chi tiết sản phẩm và duyệt sản phẩm theo danh mục thông qua giao diện web.
 
-Project được xây dựng với mục đích **học tập và thực hành phát triển web bằng ASP.NET MVC**, kết hợp với **template giao diện có sẵn** để tạo ra một hệ thống bán hàng cơ bản.
+Project được thực hiện nhằm mục đích **học tập và thực hành phát triển web với ASP.NET MVC**, kết hợp với **template giao diện có sẵn** để xây dựng một hệ thống bán hàng cơ bản.
 
 ---
 
-## 🚀 Công nghệ sử dụng
+# 🚀 Công nghệ sử dụng
 
 | Công nghệ         | Mô tả                                     |
 | ----------------- | ----------------------------------------- |
 | ASP.NET MVC       | Framework phát triển web theo mô hình MVC |
 | C#                | Ngôn ngữ lập trình chính                  |
-| Razor View Engine | Engine dùng để render giao diện           |
+| Razor View Engine | Engine render giao diện                   |
 | SQL Server        | Hệ quản trị cơ sở dữ liệu                 |
-| Entity Framework  | ORM hỗ trợ thao tác với database          |
+| Entity Framework  | ORM hỗ trợ thao tác database              |
 | Bootstrap         | Framework giao diện responsive            |
-| jQuery            | Thư viện hỗ trợ JavaScript                |
+| jQuery            | Thư viện JavaScript                       |
 
 ---
 
-## ✨ Chức năng chính
+# ✨ Chức năng chính
 
-### 👤 Người dùng
+## 👤 Người dùng
 
 * Xem danh sách sản phẩm
 * Xem chi tiết sản phẩm
 * Duyệt sản phẩm theo danh mục
 * Giao diện responsive
 
-### ⚙️ Quản trị (Admin)
+## ⚙️ Quản trị (Admin)
 
 * Quản lý sản phẩm
 * Quản lý danh mục
@@ -45,7 +45,7 @@ Project được xây dựng với mục đích **học tập và thực hành p
 
 ---
 
-## 📂 Cấu trúc thư mục
+# 📂 Cấu trúc thư mục
 
 ```
 WebBanHangOnline
@@ -60,15 +60,31 @@ WebBanHangOnline
 
 ---
 
-## ⚡ Cách chạy project
+# ⚡ Hướng dẫn cài đặt và chạy project
 
-### 1️⃣ Clone repository
+## 1️⃣ Clone repository
 
 ```bash
 git clone https://github.com/yourusername/WebBanHangOnline.git
 ```
 
-### 2️⃣ Mở project
+---
+
+# 🗄 Cài đặt SQL Server
+
+Nếu máy chưa có SQL Server, hãy tải tại:
+
+SQL Server 2022 Express
+https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+
+Sau khi cài đặt SQL Server, nên cài thêm:
+
+SQL Server Management Studio (SSMS)
+https://aka.ms/ssmsfullsetup
+
+---
+
+## 2️⃣ Mở project
 
 Mở project bằng **Visual Studio**
 
@@ -76,7 +92,9 @@ Mở project bằng **Visual Studio**
 WebBanHangOnline.sln
 ```
 
-### 3️⃣ Cấu hình Database
+---
+
+## 3️⃣ Cấu hình Database
 
 Mở file:
 
@@ -84,7 +102,7 @@ Mở file:
 Web.config
 ```
 
-Chỉnh sửa **connection string** để kết nối với SQL Server.
+Chỉnh sửa **connection string** để kết nối tới SQL Server.
 
 Ví dụ:
 
@@ -96,7 +114,57 @@ Ví dụ:
 </connectionStrings>
 ```
 
-### 4️⃣ Chạy project
+---
+
+# 🧩 Tạo Database bằng Entity Framework Migration
+
+Mở **Package Manager Console** trong Visual Studio.
+
+## Kiểm tra chi tiết quá trình tạo database
+
+```powershell
+update-database -Verbose
+```
+
+Lệnh này hiển thị **toàn bộ SQL command được thực thi** khi tạo database.
+
+## Tạo database
+
+```powershell
+update-database
+```
+
+Sau khi chạy thành công, **database và các bảng sẽ được tạo tự động trong SQL Server**.
+
+---
+
+# 🔐 Tài khoản Admin mặc định
+
+Sau khi chạy project, bạn có thể đăng nhập vào hệ thống quản trị bằng tài khoản mặc định sau:
+
+**Username**
+
+```
+admin@gmail.com
+```
+
+**Password**
+
+```
+Admin@123
+```
+
+Tài khoản này có quyền **quản trị hệ thống (Admin)** và có thể:
+
+* Quản lý sản phẩm
+* Quản lý danh mục
+* Quản lý dữ liệu hệ thống
+
+⚠️ Khuyến nghị: Sau khi đăng nhập lần đầu nên **đổi mật khẩu để đảm bảo bảo mật**.
+
+---
+
+# ▶️ Chạy project
 
 Chạy project bằng:
 
@@ -112,9 +180,9 @@ Start Without Debugging
 
 ---
 
-## 🎨 Giao diện
+# 🎨 Giao diện
 
-Project sử dụng **template frontend có sẵn** kết hợp với **Razor View** để xây dựng giao diện hiển thị sản phẩm.
+Project sử dụng **template frontend có sẵn** kết hợp với **Razor View** để xây dựng giao diện website.
 
 Các thư viện frontend chính:
 
@@ -125,7 +193,7 @@ Các thư viện frontend chính:
 
 ---
 
-## 🎯 Mục tiêu project
+# 🎯 Mục tiêu project
 
 Project được thực hiện nhằm:
 
@@ -136,12 +204,12 @@ Project được thực hiện nhằm:
 
 ---
 
-## 👨‍💻 Tác giả
+# 👨‍💻 Tác giả
 
 **Group What Ever**
 
 ---
 
-## 📄 License
+# 📄 License
 
 Project được sử dụng cho mục đích **học tập và nghiên cứu**.
